@@ -102,7 +102,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -127,3 +126,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Databases
+*.sqlite3
+
+# PyCharm
+**/.idea/workspace.xml
+**/.idea/tasks.xml
