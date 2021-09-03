@@ -1,6 +1,6 @@
 import os
 
-from django_default.settings import BASE_DIR
+from .vars import BASE_DIR
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.getenv('DJANGO_STATIC_ROOT')

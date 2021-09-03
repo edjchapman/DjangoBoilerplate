@@ -129,6 +129,7 @@ dmypy.json
 
 # Databases
 *.sqlite3
+data/
 
 # PyCharm
 **/.idea/workspace.xml
