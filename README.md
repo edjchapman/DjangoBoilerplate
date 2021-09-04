@@ -1,6 +1,7 @@
-# DjangoDefault
+# Django Boilerplate
 
-Default Django project, ready to be adapted and deployed.
+Boilerplate Django project, including Docker configuration for developemnt and production. To be used as the base for
+other projects.
 
 ---
 
