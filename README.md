@@ -4,7 +4,7 @@ Default Django project, ready to be adapted and deployed.
 
 ---
 
-# Setup
+# Development
 
 ### Build the images and spin up the containers
 
@@ -26,6 +26,15 @@ hello_django_dev=# \l
 hello_django_dev=# \c hello_django_dev
 hello_django_dev=# \dt
 hello_django_dev=# \q
+```
+
+---
+
+# Production
+
+```shell
+docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml exec backend python manage.py migrate --noinput
 ```
 
 ---
