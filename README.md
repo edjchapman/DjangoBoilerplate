@@ -1,7 +1,12 @@
 # Django Boilerplate
 
-Boilerplate Django project, including Docker configuration for developemnt and production. To be used as the base for
-other projects.
+Boilerplate Django project, to base other projects on.
+
+Includes:
+
+- Docker configuration for developemnt and production.
+- NGINX service with Gunicorn reverse-proxy.
+- Postgres DB service.
 
 ---
 
