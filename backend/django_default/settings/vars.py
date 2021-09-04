@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'f4cuk(!pf)_@o1fkqk$5(h85nzq@%voh_hc
 
 APPENV = os.getenv('DJANGO_APP_ENV', "LOCAL")
 
-DEBUG = APPENV != "PRODUCTION"
+DEBUG = int(os.getenv("DJANGO_DEBUG", default=0))
 
 ROOT_URLCONF = f'{PROJECT_NAME}.urls'
 
