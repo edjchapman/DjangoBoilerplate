@@ -10,6 +10,8 @@ services:
       - "8000:8000"
     env_file:
       - ./.env.dev
+    depends_on:
+      - db
   db:
     image: postgres:13.0-alpine
     volumes:
@@ -18,5 +20,7 @@ services:
       - POSTGRES_USER=hello_django
       - POSTGRES_PASSWORD=hello_django
       - POSTGRES_DB=hello_django_dev
+    env_file:
+      - ./.env.dev
 volumes:
   postgres_data:

@@ -4,7 +4,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-PROJECT_NAME = 'django_default'
+PROJECT_NAME = 'django_boilerplate'
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'f4cuk(!pf)_@o1fkqk$5(h85nzq@%voh_hc02*_35eo_rppf=x')
 
