@@ -1,4 +1,3 @@
-FROM nginx:1.21-alpine
-
-RUN rm /etc/nginx/conf.d/default.conf
-COPY conf.nginx /etc/nginx/conf.d/nginx.conf
+FROM jwilder/nginx-proxy:0.9
+COPY vhost.d/default.nginx /etc/nginx/vhost.d/default
+COPY custom.nginx /etc/nginx/conf.d/custom.conf
