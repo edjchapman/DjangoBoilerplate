@@ -17,3 +17,5 @@ ROOT_URLCONF = f'{PROJECT_NAME}.urls'
 WSGI_APPLICATION = f'{PROJECT_NAME}.wsgi.application'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
