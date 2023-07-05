@@ -10,10 +10,15 @@ services:
       - "8000:8000"
     volumes:
       - ./backend/:/usr/src/backend/
+    entrypoint:
+      - /usr/src/backend/docker-entrypoint.sh
     restart: always
     env_file:
-      - ./.env.dev
+      - .env.dev
     depends_on:
+      - celery_beat
+      - celery_worker
+      - redis
       - db
 
   # DB
@@ -28,7 +33,7 @@ services:
       - POSTGRES_PASSWORD=projectx
       - POSTGRES_DB=projectx
     env_file:
-      - ./.env.dev
+      - .env.dev
 
   # REDIS
   redis:
@@ -43,9 +48,8 @@ services:
       - ./backend/:/usr/src/backend/
     restart: always
     env_file:
-      - ./.env.dev
+      - .env.dev
     depends_on:
-      - backend
       - redis
 
   # CELERY BEAT
@@ -56,11 +60,10 @@ services:
       - ./backend/:/usr/src/backend/
     restart: always
     env_file:
-      - ./.env.dev
+      - .env.dev
     depends_on:
-      - backend
       - redis
+      - db
 
 volumes:
   postgres_data:
-

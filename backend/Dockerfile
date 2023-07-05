@@ -24,6 +24,3 @@ RUN chmod +x /usr/src/backend/docker-entrypoint.sh
 
 # copy project
 COPY . .
-
-# run entrypoint.sh
-ENTRYPOINT ["/usr/src/backend/docker-entrypoint.sh"]
