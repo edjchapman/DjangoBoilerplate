@@ -40,6 +40,20 @@ docker compose run backend pytest
 ```
 
 ---
+# Management Commands
+
+## Populate database
+```shell
+docker compose run backend python manage.py populate_database
+```
+
+## Migrate DB Changes
+```shell
+docker compose run backend python manage.py makemigrations
+docker compose run backend python manage.py migrate
+```
+
+---
 # Database
 ## Connect to local instance
 - Full URL: `jdbc:postgresql://0.0.0.0:5432/projectx`
@@ -48,9 +62,3 @@ docker compose run backend pytest
 - user: `projectx`
 - password: `projectx`
 - database: `projectx`
-
-## Migrate DB Changes
-```shell
-docker compose run backend python manage.py makemigrations
-docker compose run backend python manage.py migrate
-```
